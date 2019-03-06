@@ -1,14 +1,16 @@
 language: node_js 
-node_js :
-  - 11.0
-  
+node_js: 
+  - "stable"
+cache:
+  directories:
+    - "server/node_modules"
+
 
 env:
   global:
     -CODECLIMATE_REPO_TOKEN = 844a1b3370033c705944393c4d494f72a803b5b33d56b58c7599ceb8aec65b4e
-cache:
-  directories:
-    -'node_modules'
+before_install : 
+ - cd api
 
 install: 
   -npm install
