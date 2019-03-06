@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc _mocha test/*.test.js --recursive --require @babel/register --timeout 10000 --exit",
-    "build": "babel src --out-dir dist",
-    "start": "npm run build && node dist/index.js",
+    "build": "babel src --out-dir build",
+    "start": "npm run build && node build/index.js",
     "generate-lcov": "nyc report --reporter=text-lcov >lcov.info",
     "coveralls": "coveralls < lcov.info",
     "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",

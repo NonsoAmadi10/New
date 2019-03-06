@@ -9,6 +9,11 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use('/api/v1/epicmail', userRoutes);
 
+app.get('/', (req, res) => {
+  res.json({
+    Message: 'Welcome citizen',
+  });
+});
 app.get('/api', (req, res) => {
   res.json({
     message: 'welcome to the api',
