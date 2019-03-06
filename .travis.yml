@@ -7,7 +7,8 @@ node_js:
 env:
   global:
     -CODECLIMATE_REPO_TOKEN = 844a1b3370033c705944393c4d494f72a803b5b33d56b58c7599ceb8aec65b4e
-
+before_script:
+  - cd server/
 script:
   - npm install
   - npm run test
