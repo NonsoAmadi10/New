@@ -9,8 +9,7 @@ env:
 cache:
   directories:
     -'node_modules'
-before_install :
-  -cd server/
+
 install: 
   -npm install
 script:
